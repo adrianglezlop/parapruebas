@@ -193,8 +193,11 @@
           <%= f.radio_button  :fiel,1,checked:true,:style=>"position:absolute;top:-46px;left:-36px;","ng-model":"credito.fiel" ,"ng-disabled":"block"%>
           <%= f.radio_button  :fiel,0,:style=>"position:absolute;top:-46px;left:43px;","ng-model":"credito.fiel","ng-disabled":"block"%>
       </div>
-      
+    
        <div style="position:absolute;top:0px;left:150px;">
+         <div class="alert alert-success">
+           Mensaje
+         </div>
            <%= f.radio_button  :vale,0,checked:true,"value":true,"ng-model":"credito.vale","ng-disabled":"block","ng-change":"vale()"%> <%= f.label "#{:vale}_true", "Credito" %>
           <%= f.radio_button  :vale,1,"ng-model":"credito.vale","ng-disabled":"block","ng-change":"vale()"%> <%= f.label "#{:vale}_false", "Vale" %>
 
@@ -602,7 +605,7 @@
     </div>
     
     <div class="actions" id="solo_en_new">
-      <div class="input-field col s12">
+       <div class="input-field col s12">
          <div class="field">
             <%= f.label :pdf64,"cargar PDF" %><br>
             <input type="file" id="filePicker" onchange="previewFile()" accept=".pdf" max-size="2024">
@@ -645,7 +648,11 @@
               alert("Error al procesar pdf, intente cargarlo nuevamente");
             }
           }
+          
+          if vale
         </script>
+        
+        
       </div>
       <%= f.submit "Guardar",id:"submitid" %>
     </div>
