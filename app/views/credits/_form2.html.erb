@@ -195,8 +195,8 @@
       </div>
       
        <div style="position:absolute;top:50px;left:150px;">
-          <%= f.radio_button  :vale,1,checked:true,:style=>"position:absolute;top:-46px;left:-36px;","ng-model":"credito.vale" ,"ng-disabled":"block"%> <%= f.label "#{:vale}_true", "Credito" %>
-          <%= f.radio_button  :vale,0,:style=>"position:absolute;top:-46px;left:43px;","ng-model":"credito.vale","ng-disabled":"block"%> <%= f.label "Vale" %>
+           <%= f.radio_button  :vale,0,checked:true,"value":true,"ng-model":"credito.vale","ng-disabled":"block","ng-change":"vale()"%> <%= f.label "#{:vale}_true", "Credito" %>
+          <%= f.radio_button  :vale,1,"ng-model":"credito.vale","ng-disabled":"block","ng-change":"vale()"%> <%= f.label "#{:vale}_false", "Vale" %>
 
       </div>
       
