@@ -24,6 +24,13 @@
   <tbody>
     <% @credits.each do |credit| %>
       <tr>
+        <%if credit.vale %>
+          <td><%= credit.vale%></td>
+        <%else%>
+          <td><%= credit.vale%></td>
+        <%end%>
+        
+        
         <%if credit.agente_empresa %>
           <td><%= credit.padre.nombre_completo%></td>
         <%else%>
