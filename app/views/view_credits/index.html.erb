@@ -25,7 +25,7 @@
   <tbody>
     <% @credits.each do |credit| %>
       <tr>
-        <%if credit.vale %>
+        <%if credit.vale == 1 %>
           <td>V</td>
         <%else%>
           <td></td>
