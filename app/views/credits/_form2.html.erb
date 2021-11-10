@@ -195,10 +195,7 @@
       </div>
     
        <div style="position:absolute;top:0px;left:150px;">
-         <div class="alert alert-warning alert-dismissable">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>¡Cuidado!</strong> Es muy importante que leas este mensaje de alerta.
-         </div>
+         
            <%= f.radio_button  :vale,0,checked:true,"value":true,"ng-model":"credito.vale","ng-disabled":"block","ng-change":"vale()"%> <%= f.label "#{:vale}_true", "Credito" %>
           <%= f.radio_button  :vale,1,"ng-model":"credito.vale","ng-disabled":"block","ng-change":"vale()"%> <%= f.label "#{:vale}_false", "Vale" %>
 
