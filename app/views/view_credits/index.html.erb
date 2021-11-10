@@ -9,6 +9,7 @@
 <table style="font-size:12px;">
   <thead>
     <tr>
+      <th> </th>
       <th>AGENTE/EMPRESA</th>
       <th>SUCURSAL</th>
       <th>FECHA</th>
@@ -25,9 +26,7 @@
     <% @credits.each do |credit| %>
       <tr>
         <%if credit.vale %>
-          <td><%= credit.vale%></td>
-        <%else%>
-          <td><%= credit.vale%></td>
+          <td><%= V %></td>
         <%end%>
         
         
