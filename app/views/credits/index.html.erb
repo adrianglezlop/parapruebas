@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Producto</th>
       <th>Agente empresa</th>
       <th>Empresa</th>
       <th>Fecha</th>
@@ -19,6 +20,7 @@
   <tbody>
     <% @credits.each do |credit| %>
       <tr>
+        <td><%= credit..product_id %></td>
         <td><%= credit.agente_empresa %></td>
         <td><%= credit.referencia_agente_empresa %></td>
         <td><%= credit.fecha %></td>
