@@ -4,7 +4,7 @@ class ViewCreditsController < ApplicationController
  
   def index
     if product_id == 1
-      xprod=MyMarjo
+      xprod="MyMarjo"
     end  
     @credits = Credit.all.where(status:0).select(:id,:vale,xprod, :fecha,:apellido_paterno,:apellido_materno,:nombre_1,:nombre_2,:RFC,:fecha_de_contrato,:monto_solicitud,:agente_empresa,:referencia_agente_empresa,:created_at).order(:created_at)
     if current_user.tipo==3
