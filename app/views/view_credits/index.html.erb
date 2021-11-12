@@ -26,8 +26,7 @@
     <% @credits.each do |credit| %>
       <tr>
 
-        
-        <td><%= credit.padre.product_id%></td>
+        <td><%= credit.product_id %></td>
         <%if credit.agente_empresa %>
           <td><%= credit.padre.nombre_completo%></td>
         <%else%>
