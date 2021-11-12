@@ -25,15 +25,9 @@
   <tbody>
     <% @credits.each do |credit| %>
       <tr>
-        <%if credit.vale == 1 %>
-          <td style="background-color:orange;">
-            VALE
-          </td>
-        <%else%>
-          <td></td>
-        <%end%>
+
         
-        
+        <td><%= credit.product_id%></td>
         <%if credit.agente_empresa %>
           <td><%= credit.padre.nombre_completo%></td>
         <%else%>
