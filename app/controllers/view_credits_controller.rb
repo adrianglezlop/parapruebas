@@ -3,7 +3,7 @@ class ViewCreditsController < ApplicationController
   before_action :set_credits, only:[:show, :edit, :update, :destroy]
  
   def index
-    if product_id == 1
+    if :product_id == 1
       @xprod="MyMarjo"
     else
       @xprod="MyMarjo2"
