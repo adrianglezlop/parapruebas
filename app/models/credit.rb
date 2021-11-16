@@ -175,7 +175,20 @@ class Credit < ActiveRecord::Base
     end
     
     def nombre_producto
-        return  Product.find(self.product_id)
+        return case self.product_id
+            when 1 
+                "MipyMarjo"
+            when 2
+                "MiMarjo"
+            when 3
+                "Divorciado"
+            when 4
+                "Union libre"
+            else
+                "Viudo"
+                
+        end
+                
     end
     
     def tipo_padre
