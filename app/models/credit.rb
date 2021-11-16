@@ -173,6 +173,11 @@ class Credit < ActiveRecord::Base
           return  Company.find(self.referencia_agente_empresa)
         end
     end
+    
+    def nombre_producto
+        return  Product.find(self.product_id)
+    end
+    
     def tipo_padre
         if agente_empresa==1
             "Agente"
