@@ -177,7 +177,7 @@ class Credit < ActiveRecord::Base
     def nombre_producto
         return case self.product_id
             when 1 
-                return Product.find(:self.product_id)
+                return Product.find(:self.product_id).select(:nombre_del_producto)
             when 2
                 "MiMarjo"
             when 3
