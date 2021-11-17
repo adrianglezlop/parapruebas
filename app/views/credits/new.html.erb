@@ -1,6 +1,10 @@
 
 
-<h1>Solicitud de <% @xform %> </h1>
+<% if @xform = "C" %>
+    Saludos
+<% else %>
+    A todos
+<% end %>
 
 
 <%= render 'form2' %>
