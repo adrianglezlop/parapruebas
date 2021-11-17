@@ -1,18 +1,10 @@
 
 <script>
-    if @xform="C"
+    <% if @xform="C" %>
         Saludos
-    else
+    <% else %>
         A todos
 </script>
-if @xform = "C"
-    Saludos
-end 
-
-<% if @xform = "V" %>
-    A todos
-<% end %>
-
 
 <%= render 'form2' %>
 
