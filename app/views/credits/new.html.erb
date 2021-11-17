@@ -1,5 +1,8 @@
-
-<h1>Solicitud de credito</h1>
+<%= if @xform="V"%>
+    <h1>Solicitud de Vale</h1>
+<%=else %>
+    <h1>Solicitud de Credito</h1>
+<%= end%>
 
 
 <%= render 'form2' %>
