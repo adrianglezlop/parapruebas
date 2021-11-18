@@ -193,7 +193,7 @@
           <%= f.radio_button  :fiel,0,:style=>"position:absolute;top:-46px;left:43px;","ng-model":"credito.fiel","ng-disabled":"block"%>
       </div>
     
-       <div style="position:absolute;top:-50px;left:120px;font-size: 30px; font-weight: bold">
+       <div style="position:absolute;top:-55px;left:120px;font-size: 30px; font-weight: bold">
          
            <%= f.radio_button  :vale,0,checked:true,"value":true,"ng-model":"credito.vale","ng-disabled":"block","ng-change":"vale()"%> <%= f.label "#{:vale}_true", "Credito" %>
           <%= f.radio_button  :vale,1,"ng-model":"credito.vale","ng-disabled":"block","ng-change":"vale()"%> <%= f.label "#{:vale}_false", "Vale" %>
