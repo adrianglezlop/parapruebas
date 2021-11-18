@@ -1,10 +1,3 @@
-<script>
-  function miAlerta(evento) {
-    event.preventDefault();
-    alert("Se ah dado clic al enlace pero el sitio no ah sido abierto");
-  }
-</script>
-
   <ul id="dropdown1" class="dropdown-content">
       <li><%= link_to 'Levantar credito', '/credits/new'%></li>
       <li><%= link_to 'Levantaar Vale', '/credits/new' onclick="miAlerta()"%></li>
