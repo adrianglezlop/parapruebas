@@ -38,20 +38,6 @@
       
       <%= form_for @credit,class:"father" do |f| %>
       
-      <% if f.xform = "V" %>
-        <div id="father" style='position:relative; background-image: url("<%= image_path("creditobackisimo_Nuevo.jpg")%>");  
-          background-size: 1300px 1900px; 
-          background-repeat: no-repeat;
-          margin-left: 0px;
-        '>
-      <% else %>
-        <div id="father" style='position:relative; background-image: url("<%= image_path("creditoback_Nuevo.jpg")%>");  
-          background-size: 1300px 1900px; 
-          background-repeat: no-repeat;
-          margin-left: 0px;
-        '>
-      <% end %>
-      
     <% if @credit.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@credit.errors.count, "error") %> prohibited this credit from being saved:</h2>
@@ -67,8 +53,13 @@
     </div>
   </div>
   
-  
-  
+
+    <div id="father" style='position:relative; background-image: url("<%= image_path("creditoback_Nuevo.jpg")%>");  
+    background-size: 1300px 1900px; 
+    background-repeat: no-repeat;
+    margin-left: 0px;
+    '>
+
    
  
   
