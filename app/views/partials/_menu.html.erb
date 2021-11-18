@@ -1,6 +1,13 @@
+<script>
+  function miAlerta(evento) {
+    event.preventDefault();
+    alert("Se ah dado clic al enlace pero el sitio no ah sido abierto");
+  }
+</script>
+
   <ul id="dropdown1" class="dropdown-content">
       <li><%= link_to 'Levantar credito', '/credits/new'%></li>
-      <li><%= link_to 'Levantaar Vale', '/credits/new' onclick="miAlerta()"%></li>
+      <li><%= link_to 'Levantaar Vale', '/credits/new' :onclick="miAlerta()"%></li>
       <li><%= link_to 'Por aceptar', view_credits_path%></li>
       <li><%= link_to 'Aceptados', view_credits_aceptadas_path%></li>
       <li><%= link_to 'Rechazado', view_credits_rechazadas_path%></li>
