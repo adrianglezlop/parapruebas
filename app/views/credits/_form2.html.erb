@@ -53,11 +53,15 @@
     </div>
   </div>
   
-   <div id="father" style='position:relative; background-image: url("<%= image_path("creditoback_Nuevo.jpg")%>");  
+  <% if xform = "V" %>
+    <div id="father" style='position:relative; background-image: url("<%= image_path("creditoback_Nuevo.jpg")%>");  
     background-size: 1300px 1900px; 
     background-repeat: no-repeat;
     margin-left: 0px;
     '>
+  <% end %>
+  
+   
  
   
   <input type="hidden" value = "<%= @credit.to_json%>" ng-model="credito" ng-init="credito  = <%= @credit.to_json%>">
