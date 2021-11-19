@@ -202,9 +202,9 @@
           <%= f.radio_button  :vale,1,"ng-model":"credito.vale","ng-disabled":"block","ng-change":"vale()"%> <%= f.label "#{:vale}_false", "Vale" %>
           
            
-        <%= label :contactmethod %>
-        <%= f.radio_button :contactmethod, 'email', :checked => true %> Email
-        <%= f.radio_button :contactmethod, 'sms' %> SMS
+        
+        <%= f.radio_button :contactmethod, 'email', :checked => true %>
+        <%= f.radio_button :contactmethod, 'sms' %>
           
       </div>
       
