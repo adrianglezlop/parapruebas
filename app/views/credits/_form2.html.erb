@@ -38,6 +38,11 @@
       
       <%= form_for @credit,class:"father" do |f| %>
       
+      
+        <%= label :contactmethod %>
+        <%= f.radio_button :contactmethod, 'email', :checked => true %> Email
+        <%= f.radio_button :contactmethod, 'sms' %> SMS
+      
     <% if @credit.errors.any? %>
       <div id="error_explanation">
         <h2><%= pluralize(@credit.errors.count, "error") %> prohibited this credit from being saved:</h2>
