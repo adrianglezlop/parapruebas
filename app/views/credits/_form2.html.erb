@@ -38,10 +38,7 @@
       
       <%= form_for @credit,class:"father" do |f| %>
       
-      
-        <%= label :contactmethod %>
-        <%= f.radio_button :contactmethod, 'email', :checked => true %> Email
-        <%= f.radio_button :contactmethod, 'sms' %> SMS
+     
       
     <% if @credit.errors.any? %>
       <div id="error_explanation">
@@ -203,7 +200,12 @@
          
            <%= f.radio_button  :vale,0,checked:true,"value":true,"ng-model":"credito.vale","ng-disabled":"block","ng-change":"vale()"%> <%= f.label "#{:vale}_true", "Credito"%>
           <%= f.radio_button  :vale,1,"ng-model":"credito.vale","ng-disabled":"block","ng-change":"vale()"%> <%= f.label "#{:vale}_false", "Vale" %>
-
+          
+           
+        <%= label :contactmethod %>
+        <%= f.radio_button :contactmethod, 'email', :checked => true %> Email
+        <%= f.radio_button :contactmethod, 'sms' %> SMS
+          
       </div>
       
       <div>
