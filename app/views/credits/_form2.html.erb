@@ -53,6 +53,15 @@
     </div>
   </div>
   
+  
+  <div class="field">
+  <%= f.label :autolyse %><br />
+  <%= f.label :autolyse, "Yes", :value => "true"  %>
+  <%= f.radio_button :autolyse, true, !!params[:autolyse] %>
+  <%= f.label :autolyse, "No", :value => "false" %>
+  <%= f.radio_button :autolyse, false, !!params[:autolyse] %>
+</div>
+  
 
     <div id="father" style='position:relative; background-image: url("<%= image_path("creditoback_Nuevo.jpg")%>");  
     background-size: 1300px 1900px; 
