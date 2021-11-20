@@ -200,7 +200,7 @@
            <%= f.radio_button  :vale,0,checked:true,"value":true,"ng-model":"credito.vale","ng-disabled":"block","ng-change": "vale"%> <%= f.label "#{:vale}_true", "Credito"%>
           <%= f.radio_button  :vale,1,"ng-model":"credito.vale","ng-disabled":"block","ng-change":"vale()"%> <%= f.label "#{:vale}_false", "Vale" %>
 
-        <%= s.radio_button :plan_id, plan.id, :checked => xcolor="0" || xcolor="1" %>
+        <%= f.radio_button :plan_id, plan.id, :checked => xcolor="0" || xcolor="1" %>
 
 
       </div>
