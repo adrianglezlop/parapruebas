@@ -201,11 +201,15 @@
            <!--%= f.radio_button  :vale,0,checked:true,"value":true%--> <!--%= f.label "#{:vale}_true", "Credito"%-->
           <!--%= f.radio_button  :vale,1%--> <!--%= f.label "#{:vale}_false", "Vale" %-->
           
-            <%= f.radio_button :vale, 'Morning', onClick:"setradio()" %> Morning<br>
-           <%= f.radio_button :vale, 'Evening', onClick:"setradio()" %> Evening<br>
-           <%= f.radio_button :vale, 'Any Time', onClick:"setradio()" %> Any Time<br>
-
-      </div>
+           <div class="field">
+             <%= f.radio_button :vale, 'Daily', onClick: "resetradio(this)" %> Daily<br>
+             <div class="buttons" style="display:none;">
+                  <%= f.radio_button :vale, 'Morning', onClick:"setradio()" %> Morning<br>
+                 <%= f.radio_button :vale, 'Evening', onClick:"setradio()" %> Evening<br>
+                 <%= f.radio_button :vale, 'Any Time', onClick:"setradio()" %> Any Time<br>
+            </div>
+           <%= f.radio_button :vale, 'Weekly' %> Weekly<br>
+          </div>
       
     
       <div>
