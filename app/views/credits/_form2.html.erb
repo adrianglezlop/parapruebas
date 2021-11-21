@@ -200,9 +200,11 @@
            <!--%= f.radio_button  :vale,0,checked:true,"value":true,"ng-model":"credito.vale","ng-disabled":"block","ng-change": "vale"%--> <!--%= f.label "#{:vale}_true", "Credito"%-->
           <!--%= f.radio_button  :vale,1,"ng-model":"credito.vale","ng-disabled":"block","ng-change":"vale()"%--> <!--%= f.label "#{:vale}_false", "Vale" %-->
           
-         <input id="favorite_color_maroon" name="favorite_color" type="radio" value="maroon", onclick: "window.alert('I work!');"/>
+         
 
       </div>
+      
+      <input id="favorite_color_maroon" name="favorite_color" type="radio" value="maroon", onclick: "window.alert('I work!');"/>
       
       <div>
         <%= f.text_field :nacionalidad,:style=>"position:absolute;top:550px;left:950px;width:180px;height:18px;","ng-model":"credito.nacionalidad" ,"ng-disabled":"block"%>
