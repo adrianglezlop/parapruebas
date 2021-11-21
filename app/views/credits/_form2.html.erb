@@ -204,6 +204,15 @@
             <%= f.radio_button :vale, 'Morning', onClick:"setradio()" %> Morning<br>
            <%= f.radio_button :vale, 'Evening', onClick:"setradio()" %> Evening<br>
            <%= f.radio_button :vale, 'Any Time', onClick:"setradio()" %> Any Time<br>
+           
+           <script>
+            function setradio () {
+            var radio = document.getElementsByName('/lists/<%= @list.id %>/chores[frequency]')[0];
+            if (radio.checked == false) {
+                radio.checked = true;      
+              }
+            }
+          </script>
 
       </div>
       
