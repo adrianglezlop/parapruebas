@@ -198,8 +198,12 @@
       </div>
     
        <div style="position:absolute;top:-55px;left:120px;font-size: 30px; font-weight: bold">
-           <%= f.radio_button  :vale,0,checked:true,"value":true%> <%= f.label "#{:vale}_true", "Credito"%>
-          <%= f.radio_button  :vale,1%> <%= f.label "#{:vale}_false", "Vale" %>
+           <!--%= f.radio_button  :vale,0,checked:true,"value":true%--> <!--%= f.label "#{:vale}_true", "Credito"%-->
+          <!--%= f.radio_button  :vale,1%--> <!--%= f.label "#{:vale}_false", "Vale" %-->
+          
+            <%= f.radio_button :time_of_day, 'Morning', onClick:"setradio()" %> Morning<br>
+           <%= f.radio_button :time_of_day, 'Evening', onClick:"setradio()" %> Evening<br>
+           <%= f.radio_button :time_of_day, 'Any Time', onClick:"setradio()" %> Any Time<br>
 
       </div>
       
