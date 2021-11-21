@@ -201,11 +201,7 @@
            <%= f.radio_button  :vale,0,checked:true,"value":true, :onclick => "render_partial();"%> <%= f.label "#{:vale}_true", "Credito"%>
           <%= f.radio_button  :vale,1%> <%= f.label "#{:vale}_false", "Vale" %>
           
-          <script>
-             function render_partial() {
-            $('#partial-area').html('<%=j render :partial => "partial" %>')
-              }
-          </script>
+          
 
       </div>
       
@@ -656,7 +652,11 @@
             }
           }
         
-    }
+
+             function render_partial() {
+            $('#partial-area').html('<%=j render :partial => "partial" %>')
+              }
+    
         </script>
         
         
