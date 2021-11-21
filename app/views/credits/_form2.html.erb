@@ -200,7 +200,10 @@
            <!--%= f.radio_button  :vale,0,checked:true,"value":true,"ng-model":"credito.vale","ng-disabled":"block","ng-change": "vale"%--> <!--%= f.label "#{:vale}_true", "Credito"%-->
           <!--%= f.radio_button  :vale,1,"ng-model":"credito.vale","ng-disabled":"block","ng-change":"vale()"%--> <!--%= f.label "#{:vale}_false", "Vale" %-->
           
-          <%= f.radio_button :type, true, onKeyUp: "alert('hi')", checked: 'checked' %> 
+          <%= f.radio_button :type, true, onclick: "alert('cred')", checked: 'checked' %> 
+          <%= f.label :type, 'Credito' %>
+          
+          <%= f.radio_button :type, false, onclick: "alert('vale')" %> 
           <%= f.label :type, 'Vale' %>
 
       </div>
