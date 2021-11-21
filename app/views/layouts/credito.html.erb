@@ -185,35 +185,6 @@
     }
     
     
-    $scope.credvale = function(){
-      $scope.tipo="";
-      $scope.creditovale=[];
-      if($scope.credito.vale==1)
-      {
-        $scope.tipo="Agente";
-        $http.get("/agents.json")
-        .success(function(data){
-          for (var x=0;x<data.length;x++)
-            $scope.agentEmp.push({id:data[x].id,nombre:data[x].nombre_del_agente});
-          console.log($scope.agentEmp);
-        })
-        .error(function(data){
-          console.log(data);
-        });
-      }else if ($scope.credito.agente_empresa==0){
-        $scope.tipo="Empresa";
-        $http.get("/companies.json")
-        .success(function(data){
-          for (var x=0;x<data.length;x++)
-            $scope.agentEmp.push({id:data[x].id,nombre:data[x].nombre_de_empresa});
-          console.log(data);
-        })
-        .error(function(data){
-          console.log(data);
-      });
-      }
-    }
-    
     
    
     $scope.buscarCliente=function(val){
