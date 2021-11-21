@@ -197,7 +197,7 @@
       </div>
     
        <div style="position:absolute;top:-55px;left:120px;font-size: 30px; font-weight: bold">
-           <%= f.radio_button  :vale,0,checked:true,"value":true, ":onclick => alert 'credito'"%> <%= f.label "#{:vale}_true", "Credito"%>
+           <%= f.radio_button  :vale,0,checked:true,"value":true, :onclick => alert 'credito'%> <%= f.label "#{:vale}_true", "Credito"%>
           <%= f.radio_button  :vale,1,"ng-model":"credito.vale"%> <%= f.label "#{:vale}_false", "Vale" %>
           
 
