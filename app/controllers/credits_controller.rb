@@ -52,7 +52,6 @@ class CreditsController < ApplicationController
 
   # GET /credits/new
   def new
-    @xvale = 0 
     @credit = Credit.new
   end
 
