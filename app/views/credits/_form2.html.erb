@@ -205,7 +205,9 @@
             <%= f.radio_button  :vale,1%> 
             <%= f.label "#{:vale}_false", "Vale" %> 
 
-    
+          <% if @xvale == 1 %>
+            alert 'saludos' 
+          <% end %>
       <div>
         <%= f.text_field :nacionalidad,:style=>"position:absolute;top:550px;left:950px;width:180px;height:18px;","ng-model":"credito.nacionalidad" ,"ng-disabled":"block"%>
       </div>
