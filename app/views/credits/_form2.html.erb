@@ -199,15 +199,12 @@
     
        <div style="position:absolute;top:-55px;left:120px;font-size: 30px; font-weight: bold">
         
-             <%= f.radio_button  :vale,0,checked:true,"value":true, :onclick => @xvale=1%> 
+             <%= f.radio_button  :vale,0,checked:true,"value":true, :onclick => 'Credito'%> 
              <%= f.label "#{:vale}_true", "Credito"%>
              
-            <%= f.radio_button  :vale,1%> 
+            <%= f.radio_button  :vale,1, :onclick => 'Vale'%> 
             <%= f.label "#{:vale}_false", "Vale" %> 
 
-          <% if @xvale == 1 %>
-            alert 'saludos' 
-          <% end %>
       <div>
         <%= f.text_field :nacionalidad,:style=>"position:absolute;top:550px;left:950px;width:180px;height:18px;","ng-model":"credito.nacionalidad" ,"ng-disabled":"block"%>
       </div>
