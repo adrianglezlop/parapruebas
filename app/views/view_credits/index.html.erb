@@ -25,27 +25,27 @@
   <tbody>
     <% @credits.each do |credit| %>
       <tr>
-         <% return case credit.product_id %>
+         <% case credit.product_id %>
             <% when 1 %>
-                "MIPYMARJOQ"
+                <td><%= "MIPYMARJOQ" %></td>
             <% when 2 %>
-                "MARJO26"
+                <td><%="MARJO26" %></td>
             <% when 3 %>
-                "MARJO26"
+                <td><%="MARJO26" %></td>
             <% when 4 %>
-                "MARJO5"
+                <td><%="MARJO5" %></td>
             <% when 5 %>
-                "MIPYMARJOS"
-            <% when 6 %>
-                "ANGMPO"
+                <td><%="MIPYMARJOS" %></td>
+            <% when 6 %> 
+                <td><%="ANGMPO" %></td>
             <% when 7 %>
-                "CDMXQ"
+                <td><%="CDMXQ" %></td>
             <% when 8 %>
-                "CDMXS"
+                <td><%="CDMXS" %></td>
             <% when 9 %>
-                "MPO12"
+                <td><%="MPO12" %></td>
             <% when 10 %>
-                "MARJOV"
+                <td><%="MARJOV" %></td>
         <% end %>
    
         <%if credit.agente_empresa %>
