@@ -52,6 +52,7 @@ class CreditsController < ApplicationController
 
   # GET /credits/new
   def new
+    @esvale = params[:esvale]
     @credit = Credit.new
   end
 
