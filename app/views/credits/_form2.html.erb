@@ -200,10 +200,10 @@
     
        <div style="position:absolute;top:-55px;left:120px;font-size: 30px; font-weight: bold">
         
-             <%= f.radio_button  :vale,:xvale,checked:true,"value":true%> 
+             <%= f.radio_button  :vale,:xvale,"value":true%> 
              <%= f.label "#{:vale}_true", "Credito"%>
              
-            <%= f.radio_button  :vale,1%> 
+            <%= f.radio_button  :vale,:xvale%> 
             <%= f.label "#{:vale}_false", "Vale" %> 
 
       <div>
