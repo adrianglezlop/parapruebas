@@ -52,7 +52,6 @@ class CreditsController < ApplicationController
 
   # GET /credits/new
   def new
-    esvale = false
     @credit = Credit.new
   end
 
