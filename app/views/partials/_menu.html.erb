@@ -1,6 +1,6 @@
 var @xvale = 0
   <ul id="dropdown1" class="dropdown-content">
-      <li><%= link_to 'Levantar credito', "/credits/new", :onclick => @xvale=0, alert('Saludos')%></li>
+      <li><%= link_to 'Levantar credito', "/credits/new", :onclick => @xvale=0, :alert('Saludos')%></li>
       <li><%= link_to 'Levantar Vale', "/credits/new", :onclick => @xvale=1%></li>
       <li><%= link_to 'Por aceptar', view_credits_path%></li>
       <li><%= link_to 'Aceptados', view_credits_aceptadas_path%></li>
