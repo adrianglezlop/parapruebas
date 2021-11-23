@@ -1,6 +1,7 @@
 
   <ul id="dropdown1" class="dropdown-content">
-      <li><%= link_to 'Levantar creditos', '/credits/new'%></li>
+      <li><%= link_to 'Levantar creditos', '/credits/new', {vale: '0', method: :post}%></li>
+      <li><%= link_to 'Levantar Vale', '/credits/new', {vale: '1', method: :post}%></li>
       <li><%= link_to 'Por aceptar', view_credits_path%></li>
       <li><%= link_to 'Aceptados', view_credits_aceptadas_path%></li>
       <li><%= link_to 'Rechazado', view_credits_rechazadas_path%></li>
