@@ -205,6 +205,12 @@
             <!--%= f.radio_button  :vale,1%--> 
             <!--%= f.label "#{:vale}_false", "Vale" %--> 
             
+            <%= f.label :Competition_type %> <br>
+            <%= f.radio_button :type_competition, "regression", checked: true, class: "my-radio" %>
+            <%= f.label :type_competition, "Regression"%>
+            &nbsp;
+            <%= f.radio_button :type_competition, "classification", class: "my-radio" %>
+            <%= f.label :type_competition, "Classification"%>
 
       <div>
         <%= f.text_field :nacionalidad,:style=>"position:absolute;top:550px;left:950px;width:180px;height:18px;","ng-model":"credito.nacionalidad" ,"ng-disabled":"block"%>
