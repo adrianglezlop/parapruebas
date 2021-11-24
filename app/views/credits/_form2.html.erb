@@ -662,13 +662,7 @@
     
         </script>
         
-        
-        
-      </div>
-      <%= f.submit "Guardar",id:"submitid" %>
-      
-      
-      <script type="text/javascript">
+        <script type="text/javascript">
           $(document).ready(function() {
           $('.my-radio').change(function() {
 
@@ -689,9 +683,15 @@
         $.each(options, function(key, value) {
           $('#selectMetric').append('<option value="' + value + '">' + key + '</option>');
           });
+          });
         });
-      });
-    </script>
+      </script>
+        
+      </div>
+      <%= f.submit "Guardar",id:"submitid" %>
+      
+      
+      
       
       
     </div>
