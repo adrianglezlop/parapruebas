@@ -662,30 +662,7 @@
     
         </script>
         
-        <script type="text/javascript">
-          $(document).ready(function() {
-          $('.my-radio').change(function() {
-
-          if($(this).val() == "credito") {
-            var options = {
-            'Mean Absolute Error': 'mean_absolute_error',
-            'Root Mean Squared Error': 'root_mean_squared_error',
-            'Weighted Mean Absolute Error': 'weighted_mean_absolute_error'
-              };
-          } else {
-            var options = {
-            'Accuracy': 'accuracy',
-            'Mean Utility': 'mean_utility'
-              };
-          }
-
-        $('#selectMetric').empty();
-        $.each(options, function(key, value) {
-          $('#selectMetric').append('<option value="' + value + '">' + key + '</option>');
-          });
-          });
-        });
-      </script>
+        
         
       </div>
       <%= f.submit "Guardar",id:"submitid" %>
