@@ -205,11 +205,12 @@
             
           
             <div class="form-group col-xs-6">
-              <%= f.radio_button :vale, "credito", checked: true, class: "my-radio" %>
-              <%= f.label :vale, "Credito"%>
+              <%= f.label :Competition_type %> <br>
+              <%= f.radio_button :vale, "regression", checked: true, class: "my-radio" %>
+              <%= f.label :vale, "Regression"%>
               &nbsp;
-              <%= f.radio_button :vale, "vale", class: "my-radio" %>
-              <%= f.label :vale, "Vale"%>
+              <%= f.radio_button :vale, "classification", class: "my-radio" %>
+              <%= f.label :vale, "Classification"%>
             </div>
             
 
@@ -665,16 +666,16 @@
     
         </script>
         
-        <script type="text/javascript">
+       <script type="text/javascript">
           $(document).ready(function() {
             $('.my-radio').change(function() {
         
-              if($(this).val() == "credito") {
+              if($(this).val() == "regression") {
                 alert("Credito")
-                };  
+                };
               } else {
-                alert("Vale")
-                  };
+                 alert("Vale")
+                };
               }
         
               $('#selectMetric').empty();
