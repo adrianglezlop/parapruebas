@@ -196,21 +196,21 @@
     
        <div style="position:absolute;top:-55px;left:120px;font-size: 30px; font-weight: bold">
         
-             <!--%= f.radio_button  :vale,0,checked:true,"value":true,class:"father" %--> 
-             <!--%= f.label "#{:vale}_true", "Credito"%-->
+             <%= f.radio_button  :vale,0,checked:true,"value":true%> 
+             <%= f.label "#{:vale}_true", "Credito"%>
 
 
-            <!--%= f.radio_button  :vale,1%--> 
-            <!--%= f.label "#{:vale}_false", "Vale" %--> 
+            <%= f.radio_button  :vale,1%> 
+            <%= f.label "#{:vale}_false", "Vale" %> 
             
           
-            <div class="form-group col-xs-6">
-              <%= f.radio_button :vale,0, checked: true, class: "my-radio" %>
-              <%= f.label :vale, "Credito"%>
-              &nbsp;
-              <%= f.radio_button :vale, 1, class: "my-radio" %>
-              <%= f.label :vale, "Vale"%>
-            </div>
+            <!--div class="form-group col-xs-6"-->
+              <!--%= f.radio_button :vale,0, checked: true, class: "my-radio" %-->
+              <!--%= f.label :vale, "Credito"%-->
+              <!--&nbsp;-->
+              <!--%= f.radio_button :vale, 1, class: "my-radio" %-->
+              <!--%= f.label :vale, "Vale"%-->
+            <!--/div-->
             
 
       <div>
