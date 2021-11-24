@@ -205,11 +205,10 @@
             
           
             <div class="form-group col-xs-6">
-              <%= f.label :Competition_type %> <br>
-              <%= f.radio_button :vale, "regression", checked: true, class: "my-radio" %>
+              <%= f.radio_button :vale, "credito", checked: true, class: "my-radio" %>
               <%= f.label :vale, "Credito"%>
               &nbsp;
-              <%= f.radio_button :vale, "classification", class: "my-radio" %>
+              <%= f.radio_button :vale, "vale", class: "my-radio" %>
               <%= f.label :vale, "Vale"%>
             </div>
 
@@ -669,17 +668,10 @@
           $(document).ready(function() {
             $('.my-radio').change(function() {
         
-              if($(this).val() == "regression") {
-                var options = {
-                  'Mean Absolute Error': 'mean_absolute_error',
-                  'Root Mean Squared Error': 'root_mean_squared_error',
-                  'Weighted Mean Absolute Error': 'weighted_mean_absolute_error'
-                };
+              if($(this).val() == "credito") {
+                alert ('Credito')
               } else {
-                var options = {
-                  'Accuracy': 'accuracy',
-                  'Mean Utility': 'mean_utility'
-                };
+                 alert ('Vale')
               }
         
               $('#selectMetric').empty();
