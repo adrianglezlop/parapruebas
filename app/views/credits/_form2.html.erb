@@ -198,12 +198,15 @@
     
        <div style="position:absolute;top:-55px;left:120px;font-size: 30px; font-weight: bold">
         
-             <%= f.radio_button  :vale,0,checked:true,"value":true,class:"father" %> 
-             <%= f.label "#{:vale}_true", "Credito"%>
+             <!--%= f.radio_button  :vale,0,checked:true,"value":true,class:"father" %--> 
+             <!--%= f.label "#{:vale}_true", "Credito"%-->
 
 
-            <%= f.radio_button  :vale,1%> 
-            <%= f.label "#{:vale}_false", "Vale" %> 
+            <!--%= f.radio_button  :vale,1%--> 
+            <!--%= f.label "#{:vale}_false", "Vale" %--> 
+            
+            
+            <%= button_to "Credito", :id => "open-contacts-dialog-btn", :class => "inbox-sf-add-btn tip", :method => :get %>
 
       <div>
         <%= f.text_field :nacionalidad,:style=>"position:absolute;top:550px;left:950px;width:180px;height:18px;","ng-model":"credito.nacionalidad" ,"ng-disabled":"block"%>
