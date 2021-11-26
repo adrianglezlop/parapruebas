@@ -76,6 +76,9 @@
           <%= f.radio_button  :agente_empresa,0,"ng-model":"credito.agente_empresa","ng-disabled":"block","ng-change":"agente_o_empresa()"%> <%= f.label "#{:agente_empresa}_false", "Empresa" %>
         </p>
       </div>
+      
+      <%= form.collection_select :city_id, City.order(:name), :id, :name %>
+
        
       
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
