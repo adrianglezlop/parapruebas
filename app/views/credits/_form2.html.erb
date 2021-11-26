@@ -201,8 +201,11 @@
              <!--%= f.label "#{:vale}_true", "Credito"%-->
 
 
-            <%= f.radio_button  :vale,0%> 
-            <%= f.label "#{:vale}_false", "Vale" %> 
+            <!--%= f.radio_button  :vale,0%--> 
+            <!--%= f.label "#{:vale}_false", "Vale" %--> 
+            
+            <%= radio_button_tag(:vale, "Open", :checked => true, onclick: "confirm();") %>
+             <%= label_tag(:vale, "Open", id: "open") %>
             
           
             <!--div class="form-group col-xs-6"-->
@@ -662,6 +665,14 @@
             }
           }
 
+        </script>
+        
+        
+        <script>
+          function comfirm() {
+            var result = prompt('Why do you want to close the ticket?: ');
+            document.getElementById("reason").value = result;
+          }
         </script>
         
        </div>
