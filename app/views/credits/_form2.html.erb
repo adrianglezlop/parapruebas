@@ -76,8 +76,6 @@
           <%= f.radio_button  :agente_empresa,0,"ng-model":"credito.agente_empresa","ng-disabled":"block","ng-change":"agente_o_empresa()"%> <%= f.label "#{:agente_empresa}_false", "Empresa" %>
         </p>
       </div>
-      
-      <%= form.collection_select :producto, Product.order(:id), :id, :nombre_del_producto %>
 
        
       
