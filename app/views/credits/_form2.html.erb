@@ -201,14 +201,8 @@
              <!--%= f.label "#{:vale}_true", "Credito"%-->
 
 
-            <!--%= f.radio_button  :vale,0%--> 
-            <!--%= f.label "#{:vale}_false", "Vale" %--> 
-            
-            <%= radio_button_tag(:vale, "Credito", :checked => true, onclick: "confirm();") %>
-             <%= label_tag(:vale, "Open", id: "open") %>
-             
-             <%= radio_button_tag(:vale, "Vale", :checked = false, onclick: "confirm();") %>
-             <%= label_tag(:vale, "Cerrado", id: "cerrado") %>
+            <%= f.radio_button  :vale,0, checked : true%> 
+            <%= f.label "#{:vale}_false", "Vale" %> 
             
           
             <!--div class="form-group col-xs-6"-->
