@@ -77,7 +77,7 @@
         </p>
       </div>
       
-      <%= form.collection_select :product_id, Product.order(:nombre_del_producto), :id, :nombre_del_producto %>
+      <%= form.collection_select :producto, Product.order(:id), :id, :nombre_del_producto %>
 
        
       
