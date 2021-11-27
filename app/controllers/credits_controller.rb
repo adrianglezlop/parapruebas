@@ -54,10 +54,6 @@ class CreditsController < ApplicationController
   def new
     @credit = Credit.new
   end
-  
-   def new2
-    render 'formvale'
-  end
 
   # GET /credits/1/edit
   def edit
