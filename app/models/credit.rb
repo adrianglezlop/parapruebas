@@ -85,6 +85,11 @@ class Credit < ActiveRecord::Base
     validates :fiel,
     :presence => { :if => 'fiel.nil?' }
     
+    validates :vale,
+    :inclusion => { :in => [nil,1, 0] }
+    validates :vale,
+    :presence => { :if => 'vale.nil?' }
+    
     validates :es_cliente,
     :inclusion => { :in => [nil,1, 0] }
     validates :es_cliente,
@@ -99,6 +104,7 @@ class Credit < ActiveRecord::Base
      validates_format_of :CURP, :with => /[A-Z][A-Z][A-Z][A-Z]\d\d\d\d\d\d[A-Z][A-Z][A-Z][A-Z][A-Z][A-Z]\w\w/
      #BEML920313HCMLNS09.
      validates :referencia_agente_empresa, numericality: { other_than: 0 }
+     validates :monto_solicitud, numericality: { less_than: 3001 }
      validates :agente_empresa,
     :inclusion => { :in => [nil,1, 0] }
     # 0 company 
@@ -168,6 +174,12 @@ class Credit < ActiveRecord::Base
           return  Company.find(self.referencia_agente_empresa)
         end
     end
+    
+    def nombre_producto
+        xprod= (self.product_id)
+       return  Product.find(xprod).nombre_del_producto
+    end
+    
     def tipo_padre
         if agente_empresa==1
             "Agente"

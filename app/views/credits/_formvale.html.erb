@@ -76,7 +76,6 @@
           <%= f.radio_button  :agente_empresa,0,"ng-model":"credito.agente_empresa","ng-disabled":"block","ng-change":"agente_o_empresa()"%> <%= f.label "#{:agente_empresa}_false", "Empresa" %>
         </p>
       </div>
-
        
       
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
@@ -198,11 +197,11 @@
        <div style="position:absolute;top:-55px;left:120px;font-size: 30px; font-weight: bold">
         
              <%= f.radio_button  :vale,0,checked:true,"value":true%> 
-             <%= f.label "#{:vale}_true", "Vale"%>
+             <%= f.label "#{:vale}_true", "Credito"%>
 
 
-            <!--%= f.radio_button  :vale,0%--> 
-            <!--%= f.label "#{:vale}_false", "Vale" %--> 
+            <%= f.radio_button  :vale,1%> 
+            <%= f.label "#{:vale}_false", "Vale" %> 
             
           
             <!--div class="form-group col-xs-6"-->
@@ -662,14 +661,6 @@
             }
           }
 
-        </script>
-        
-        
-        <script>
-          function confirm() {
-            var result = prompt('Why do you want to close the ticket?: ');
-            document.getElementById("reason").value = result;
-          }
         </script>
         
        </div>

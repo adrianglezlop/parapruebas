@@ -153,6 +153,8 @@
         $('#autorelleno').hide();
       console.log($scope.credito.es_cliente);
     }
+    
+    
     $scope.agente_o_empresa = function(){
       $scope.tipo="";
       $scope.agentEmp=[];
@@ -181,6 +183,9 @@
       });
       }
     }
+    
+    
+    
    
     $scope.buscarCliente=function(val){
       var query="/customers.json?"
