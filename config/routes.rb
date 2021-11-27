@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
   get 'ver_video/index'
+  
+  get 'credits/new2', to: 'credits#new2'
 
   get 'codigo_postal/:cp', to: 'codigo_postal#index'
 
