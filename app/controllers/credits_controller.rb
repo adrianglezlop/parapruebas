@@ -55,6 +55,9 @@ class CreditsController < ApplicationController
     @credit = Credit.new
   end
   
+   def new2
+    @credit = Credit.new
+  end
 
   # GET /credits/1/edit
   def edit
