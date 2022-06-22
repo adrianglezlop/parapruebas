@@ -106,7 +106,13 @@ class Credit < ActiveRecord::Base
     
      validates :referencia_agente_empresa, numericality: { other_than: 0 }
      
+<<<<<<< HEAD
      validates :monto_solicitud, numericality: { less_than: 3001 }, :if => 'product_id == 10' 
+=======
+     validates :monto_solicitud, numericality: { less_than: 3001 }, :if => 'product_id == 10'
+     validates :monto_solicitud, numericality: { less_than: 5001 }, :if => 'product_id == 11' 
+     validates :monto_solicitud, numericality: { less_than: 5001 }, :if => 'product_id == 12' 
+>>>>>>> e5b836670e400396ba5da91d769ae5590f3de31c
      validates :agente_empresa,
     :inclusion => { :in => [nil,1, 0] }
     # 0 company 
