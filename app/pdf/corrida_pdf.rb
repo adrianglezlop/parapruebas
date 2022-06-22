@@ -27,9 +27,16 @@ class CorridaPdf < Prawn::Document
           ["CAT SIN IVA","#{'%.2f' % @credit.cat_sin_iva}%"]],:cell_style => { size: 8 })
     move_down 20
     table(@arreglo,:cell_style => { size: 8 })
+<<<<<<< HEAD
+    start_new_page  
+  
+    
+     image "#{Rails.root}/app/assets/images/logo marjo.png", width: 155, height: 45
+=======
     start_new_page 
 
     image "#{Rails.root}/app/assets/images/logo marjo.png", width: 155, height: 45
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
     text "#{@credit.nombre_completo_deudor}"
     table([["FECHA DE PRESTAMO", @credit.fecha_de_contrato.strftime("%d/%m/%Y")], 
           ["MONTO PRESTAMO",Dinero.to_money(@credit.monto_solicitud)], 

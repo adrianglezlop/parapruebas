@@ -71,8 +71,12 @@ Rails.application.routes.draw do
   get 'credits/:id/editpdf', to:'credits#editpdf',as:'editpdf'
   get 'view_credits/:id/pagos', to:'view_credits#pagos',as:'creditpagos'
   resources :credits
+<<<<<<< HEAD
+  get 'credits/new2', to:'credits/new2'
+=======
  
   
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
   resources :payouts
   resources :loans
   resources :products

@@ -82,6 +82,17 @@ class Credit < ActiveRecord::Base
     validates :vale,
     :presence => { :if => 'vale.nil?' }
     
+<<<<<<< HEAD
+    validates :vale,
+    :inclusion => { :in => [nil,1, 0] }
+    validates :vale,
+    :presence => { :if => 'vale.nil?' }
+    
+    validates :es_cliente,
+    :inclusion => { :in => [nil,1, 0] }
+    validates :es_cliente,
+    :presence => { :if => 'es_cliente.nil?' }
+=======
 
     validates :fecha_de_nacimiento,
     :presence => { :if => 'vale.nil?' }
@@ -103,8 +114,12 @@ class Credit < ActiveRecord::Base
     
     validates :antiguedad_laboral_meses,
     :presence => { :if => 'vale.nil?' }
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
     
      validates :referencia_agente_empresa, numericality: { other_than: 0 }
+<<<<<<< HEAD
+     validates :monto_solicitud, numericality: { less_than: 3001 }
+=======
      
 <<<<<<< HEAD
      validates :monto_solicitud, numericality: { less_than: 3001 }, :if => 'product_id == 10' 
@@ -113,6 +128,7 @@ class Credit < ActiveRecord::Base
      validates :monto_solicitud, numericality: { less_than: 5001 }, :if => 'product_id == 11' 
      validates :monto_solicitud, numericality: { less_than: 5001 }, :if => 'product_id == 12' 
 >>>>>>> e5b836670e400396ba5da91d769ae5590f3de31c
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
      validates :agente_empresa,
     :inclusion => { :in => [nil,1, 0] }
     # 0 company 

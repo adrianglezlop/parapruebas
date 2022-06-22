@@ -3,6 +3,30 @@
 <div ng-controller="solicitud" >
   <div id="errores" style="background-color:#f0f0ff;border-size:2px;border-style:solid;z-index:99;overflow-y: scroll;">
     <div>
+<<<<<<< HEAD
+      
+      
+      <%= form_for @credit do |f| %>
+      
+      
+    <% if @credit.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@credit.errors.count, "error") %> prohibited this credit from being saved:</h2>
+  
+        <ul>
+        <% @credit.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+        </ul>
+      </div>
+    <% end %>
+      <input type="button" onclick="$('#errores').hide()" value="Cerrar">
+    </div>
+  </div>
+  
+
+    <div id="father" style='position:relative; background-image: url("<%= image_path("creditoback.jpg")%>");  
+=======
       <%= form_for @credit,class:"father" do |f| %>
       <% if @credit.errors.any? %>
         <div id="error_explanation">
@@ -24,12 +48,19 @@
 
   
   <div id="father" style='position:relative; background-image: url("<%= image_path("creditoback_Nuevo.jpg")%>");  
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
     background-size: 1300px 1900px; 
     background-repeat: no-repeat;
     margin-left: 0px;
     '>
+<<<<<<< HEAD
+
+   
+ 
+=======
   
   
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
   
   <input type="hidden" value = "<%= @credit.to_json%>" ng-model="credito" ng-init="credito  = <%= @credit.to_json%>">
       
@@ -42,10 +73,15 @@
           <%= f.radio_button  :agente_empresa,0,"ng-model":"credito.agente_empresa","ng-disabled":"block","ng-change":"agente_o_empresa()"%> <%= f.label "#{:agente_empresa}_false", "Empresa" %>
         </p>
       </div>
+<<<<<<< HEAD
+
+       
+=======
       
            
       <!--a href="/credits/caratula">Caratula</a-->
       
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
       
       <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
       <br><br><br><br><br>
@@ -56,9 +92,7 @@
       <br><br><br><br><br><br><br><br><br><br><br><br>
       <br><br><br><br><br><br><br><br><br><br><br><br>
       <br><br><br><br><br>
-      
-     
-      
+   
       
     <div class ="row">
       <div class="input-field col s12 m3 l3">
@@ -157,6 +191,32 @@
       </div>
       
       <div style="position:absolute;top:525px;left:950px;">
+<<<<<<< HEAD
+          <%= f.radio_button  :fiel,1,checked:true,:style=>"position:absolute;top:-46px;left:-36px;","ng-model":"credito.fiel" ,"ng-disabled":"block"%>
+          <%= f.radio_button  :fiel,0,:style=>"position:absolute;top:-46px;left:43px;","ng-model":"credito.fiel","ng-disabled":"block"%>
+
+      </div>
+    
+       <div style="position:absolute;top:-55px;left:120px;font-size: 30px; font-weight: bold">
+        
+             <%= f.radio_button  :vale,0,checked:true,"value":true%> 
+             <%= f.label "#{:vale}_true", "Vale"%>
+
+
+            <!--%= f.radio_button  :vale,0%--> 
+            <!--%= f.label "#{:vale}_false", "Vale" %--> 
+            
+          
+            <!--div class="form-group col-xs-6"-->
+              <!--%= f.radio_button :vale,0, checked: true, class: "my-radio" %-->
+              <!--%= f.label :vale, "Credito"%-->
+              <!--&nbsp;-->
+              <!--%= f.radio_button :vale, 1, class: "my-radio" %-->
+              <!--%= f.label :vale, "Vale"%-->
+            <!--/div-->
+            
+
+=======
           <%= f.radio_button  :fiel,0,checked:true,:style=>"position:absolute;top:-46px;left:-36px;","ng-model":"credito.fiel" ,"ng-disabled":"block"%>
           <%= f.radio_button  :fiel,1,:style=>"position:absolute;top:-46px;left:43px;","ng-model":"credito.fiel","ng-disabled":"block"%>
       </div>
@@ -168,6 +228,7 @@
       </div>
       
       
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
       <div>
         <%= f.text_field :nacionalidad,:style=>"position:absolute;top:550px;left:950px;width:180px;height:18px;","ng-model":"credito.nacionalidad" ,"ng-disabled":"block"%>
       </div>
@@ -590,7 +651,8 @@
   </div>
     
     <div class="actions" id="solo_en_new">
-      <div class="input-field col s12">
+      
+       <div class="input-field col s12">
          <div class="field">
             <%= f.label :pdf64,"cargar PDF" %><br>
             <input type="file" id="filePicker" onchange="previewFile()" accept=".pdf" max-size="2024">
@@ -599,6 +661,7 @@
           <script>
           
           var uploadField = document.getElementById("filePicker");
+          
 
           uploadField.onchange = function() {
               if(this.files[0].size > 3000000){
@@ -633,10 +696,24 @@
               alert("Error al procesar pdf, intente cargarlo nuevamente");
             }
           }
+<<<<<<< HEAD
+
+=======
           
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
         </script>
-      </div>
+        
+        
+        <script>
+          function confirm() {
+            var result = prompt('Why do you want to close the ticket?: ');
+            document.getElementById("reason").value = result;
+          }
+        </script>
+        
+       </div>
       <%= f.submit "Guardar",id:"submitid" %>
+       
     </div>
   <% end %>
   <div id="autorelleno" style="background-color:#f0f0ff;width:700px;position:fixed;top:100px;left:100px;border-size:2px;border-style:solid">
@@ -686,6 +763,11 @@
       <%else%>
           <a href="/view_credits">Atras</a>
       <%end%>
+<<<<<<< HEAD
+      
+</div>  
+=======
   </div>  
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
 </div> 
 
