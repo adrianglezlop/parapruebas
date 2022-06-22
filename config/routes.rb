@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   get 'ver_video/index'
 
   get 'codigo_postal/:cp', to: 'codigo_postal#index'
+  get 'credits/nuevo', to:'credits#nuevo' 
+  get 'credits/caratula', to:'credits#caratula' 
 
   get 'combos/pais'
 
@@ -23,7 +25,11 @@ Rails.application.routes.draw do
   get 'reports/historial_de_pagos'
   get 'reports/usuarios'
   get 'reports/agentes'
-  get 'reports/dtkta'
+  get 'reports/dtkta_clientes'
+  get 'reports/dtkta_cuentas'
+  get 'reports/dtkta_perfil'
+  get 'reports/dtkta_movtos'
+  
   get 'multiprint',to:"tickets#multiprint" ,as: "multiprint"
   put 'cancelar/:id', to:'tickets#cancelar', as: "cancelar"
   
@@ -48,6 +54,7 @@ Rails.application.routes.draw do
   get 'view_credits/caratula',to:'view_credits#caratula'
   get 'view_credits/caratulamun',to:'view_credits#caratulamun'
   get 'view_credits/corrida',to:'view_credits#corrida'
+  get 'view_credits/corridavale',to:'view_credits#corrida'
   get 'view_credits/corridamun',to:'view_credits#corridamun'
   get 'view_credits/contrato',to:'view_credits#contrato'
   get 'view_credits/contratomunicipal',to:'view_credits#contratomunicipal'
@@ -64,7 +71,12 @@ Rails.application.routes.draw do
   get 'credits/:id/editpdf', to:'credits#editpdf',as:'editpdf'
   get 'view_credits/:id/pagos', to:'view_credits#pagos',as:'creditpagos'
   resources :credits
+<<<<<<< HEAD
   get 'credits/new2', to:'credits/new2'
+=======
+ 
+  
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
   resources :payouts
   resources :loans
   resources :products

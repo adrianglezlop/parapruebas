@@ -3,8 +3,12 @@ class ViewCreditsController < ApplicationController
   before_action :set_credits, only:[:show, :edit, :update, :destroy]
  
   def index
+<<<<<<< HEAD
       
     @credits = Credit.all.where(status:0).select(:id,:vale,:product_id, :fecha,:apellido_paterno,:apellido_materno,:nombre_1,:nombre_2,:RFC,:fecha_de_contrato,:monto_solicitud,:agente_empresa,:referencia_agente_empresa,:created_at).order(:created_at)
+=======
+    @credits = Credit.all.where(status:0).select(:id,:vale,:product_id,:fecha,:apellido_paterno,:apellido_materno,:nombre_1,:nombre_2,:RFC,:fecha_de_contrato,:monto_solicitud,:agente_empresa,:referencia_agente_empresa,:created_at).order(:created_at)
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
     if current_user.tipo==3
       @credits= Credit.get_by_branch_office(@credits,current_user.branchOffices[0])
     end
@@ -81,10 +85,16 @@ class ViewCreditsController < ApplicationController
       end
     end
       
-    pdf = ContratoPdf.new(@credit)
-     
-    send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
+    if @credit.product_id == 10 or @credit.product_id == 11 or @credit.product_id == 12
+      pdf = ContratoPdf.new(@credit)
+      send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
+    else
+      pdf = ContratoPdf.new(@credit)
+      send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
+    end 
+    
   end
+  
   def entrevista
     pdf = EntrevistaPdf.new(@credit)
     send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
@@ -100,10 +110,25 @@ class ViewCreditsController < ApplicationController
   end
   
   def corrida
+    if (@credit.fecha_de_contrato.nil?)
+      @credit.update(fecha_de_contrato:Time.now)
+    end
+    if @credit.payments.count==0
+      getArreglo()
+      n = 0
+      @datos.each do |d|
+        n += 1
+        payment_v = Payment.create(fecha_de_pago:d[1],recibo:"#{n}/#{@datos.count}",estatus:0,importe:d[6],credit:@credit, pago:0, interes:0,fecha_de_corte:d[8],fecha_de_impresion:d[9])
+        payment_v.delay(run_at:d[8]).cargar_interes
+      end
+    end
+    
     getArreglo()
     pdf = CorridaPdf.new(@credit,@arreglo)
     send_data pdf.render, filename: 'report.pdf', type: 'application/pdf', disposition: "inline"
   end
+  
+
   
   def corridamun
     getArreglomun()

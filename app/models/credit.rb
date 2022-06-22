@@ -16,51 +16,51 @@ class Credit < ActiveRecord::Base
     :nombre_1,
     :nombre_2,
     :RFC,
-    :CURP,
-    :INE,
-    :nacionalidad,
-    :fecha_de_nacimiento,
-    :ciudad_de_nacimiento,
-    :estado_de_nacimiento,
-    :telefono_de_casa,
-    :telefono_celular,
-    :email_1,
-    :escolaridad,
-    :numero_de_dependientes_economicos,
-    :gasto_promedio_mensual,
-    :estado_civil,
+    #:CURP,
+    #:INE,
+    :fiel,
+    #:nacionalidad,
+    #:fecha_de_nacimiento,
+    #:ciudad_de_nacimiento,
+    #:estado_de_nacimiento,
+    #:telefono_de_casa,
+    #:telefono_celular,
+    #:email_1,
+    #:numero_de_dependientes_economicos,
+    #:gasto_promedio_mensual,
+    #:estado_civil,
     :calle,
     :numero_exterior,
-    :tipo_de_domicilio,
+    #:tipo_de_domicilio,
     #:codigo_postal,
     #:colonia,
     #:municipio,
-    :empresa_donde_labora,
-    :giro_de_la_empresa,
-    :telefono_empresa,
-    :sueldo_mensual_neto,
-    :dirreccion_empresa,
-    :colonia_empresa,
-    :municipio_empresa,
+    #:empresa_donde_labora,
+    #:giro_de_la_empresa,
+    #:telefono_empresa,
+    #:sueldo_mensual_neto,
+    #:dirreccion_empresa,
+    #:colonia_empresa,
+    #:municipio_empresa,
     :monto_solicitud,
-    :cada_cuanto_se_realizara_el_pago,
-    :lugar_donde_se_realizara_el_pago,
-    :nombre_referencia_1,
-    :domicilio_referencia_1,
-    :antiguedad_laboral_anos,
-    :antiguedad_laboral_meses,
-    :nombre_referencia_2,
-    :domicilio_referencia_2,
-    :country,
-    :nombre_referencia_familiar,
-    :domicilio_referencia_familiar,
-    :economical_activity_id,
-    #:estado_actual,
-    #:localidad,
+    #:cada_cuanto_se_realizara_el_pago,
+    #:lugar_donde_se_realizara_el_pago,
+    #:nombre_referencia_1,
+    #:domicilio_referencia_1,
+    #:antiguedad_laboral_anos,
+    #:antiguedad_laboral_meses,
+    #:nombre_referencia_2,
+    #:domicilio_referencia_2,
+    #:country,
+    #:nombre_referencia_familiar,
+    #:domicilio_referencia_familiar,
+    #:economical_activity_id,
+    :estado_actual,
+    :localidad,
     :product_id,
-    :destination_id,
+    #:destination_id,
     :customer_id,
-    :profecion_id,
+    #:profecion_id,
     presence: true
     before_save :default_values
     after_save :pdf_trans
@@ -75,16 +75,14 @@ class Credit < ActiveRecord::Base
     # 1 aceptado
     # 2 rechazada
     # 3 finalizada
-    validates :sexo,
-    :inclusion => { :in => [nil,1, 0] }
-    validates :sexo,
-    :presence => { :if => 'sexo.nil?' }
-
-    validates :fiel,
-    :inclusion => { :in => [nil,1, 0] }
-    validates :fiel,
-    :presence => { :if => 'fiel.nil?' }
     
+
+    validates :vale,
+    :inclusion => { :in => [nil,1, 0] }
+    validates :vale,
+    :presence => { :if => 'vale.nil?' }
+    
+<<<<<<< HEAD
     validates :vale,
     :inclusion => { :in => [nil,1, 0] }
     validates :vale,
@@ -94,17 +92,43 @@ class Credit < ActiveRecord::Base
     :inclusion => { :in => [nil,1, 0] }
     validates :es_cliente,
     :presence => { :if => 'es_cliente.nil?' }
+=======
+
+    validates :fecha_de_nacimiento,
+    :presence => { :if => 'vale.nil?' }
     
-    validates :familiar_con_prestamo,
-    :inclusion => { :in => [nil,1, 0] }
-    validates :familiar_con_prestamo,
-    :presence => { :if => 'familiar_con_prestamo.nil?' }
-    validates_format_of :RFC, :with => /([A-Z][A-Z]|[A-Z])[A-Z][A-Z]\d\d\d\d\d\d(\w\w\w|)/
-    #eee555555eee
-     validates_format_of :CURP, :with => /[A-Z][A-Z][A-Z][A-Z]\d\d\d\d\d\d[A-Z][A-Z][A-Z][A-Z][A-Z][A-Z]\w\w/
-     #BEML920313HCMLNS09.
+    validates :ciudad_de_nacimiento,
+    :presence => { :if => 'vale.nil?' }
+    
+    validates :estado_de_nacimiento,
+    :presence => { :if => 'vale.nil?' }
+    
+    validates :cada_cuanto_se_realizara_el_pago,
+    :presence => { :if => 'vale.nil?' }
+    
+    validates :lugar_donde_se_realizara_el_pago,
+    :presence => { :if => 'vale.nil?' }
+    
+    validates :antiguedad_laboral_anos,
+    :presence => { :if => 'vale.nil?' }
+    
+    validates :antiguedad_laboral_meses,
+    :presence => { :if => 'vale.nil?' }
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
+    
      validates :referencia_agente_empresa, numericality: { other_than: 0 }
+<<<<<<< HEAD
      validates :monto_solicitud, numericality: { less_than: 3001 }
+=======
+     
+<<<<<<< HEAD
+     validates :monto_solicitud, numericality: { less_than: 3001 }, :if => 'product_id == 10' 
+=======
+     validates :monto_solicitud, numericality: { less_than: 3001 }, :if => 'product_id == 10'
+     validates :monto_solicitud, numericality: { less_than: 5001 }, :if => 'product_id == 11' 
+     validates :monto_solicitud, numericality: { less_than: 5001 }, :if => 'product_id == 12' 
+>>>>>>> e5b836670e400396ba5da91d769ae5590f3de31c
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
      validates :agente_empresa,
     :inclusion => { :in => [nil,1, 0] }
     # 0 company 
@@ -117,22 +141,7 @@ class Credit < ActiveRecord::Base
     # 2...... divorciado
     # 3-.-.-.-union libre
     # 4,-,--,-,viudo
-    def estado_civil_cadena
-        return case self.estado_civil
-            when 0 
-                "Soltero"
-            when 1
-                "Casado"
-            when 2
-                "Divorciado"
-            when 3
-                "Union libre"
-            else
-                "Viudo"
-                
-        end
-                
-    end
+
     def fecha_en_español
         fecha_aux = fecha_de_contrato
         cad ="#{fecha_aux.day} de "
@@ -410,4 +419,7 @@ class Credit < ActiveRecord::Base
         self.customer_id=customer.id
         self.save()
     end
+    
+    
 end
+

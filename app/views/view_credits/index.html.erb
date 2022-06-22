@@ -25,7 +25,11 @@
   <tbody>
     <% @credits.each do |credit| %>
       <tr>
+<<<<<<< HEAD
          <% case credit.product_id %>
+=======
+        <% case credit.product_id %>
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
             <% when 1 %>
                 <td><%= "MIPYMARJOQ" %></td>
             <% when 2 %>
@@ -46,8 +50,17 @@
                 <td><%="MPO12" %></td>
             <% when 10 %>
                 <td><%="MARJOV" %></td>
+<<<<<<< HEAD
         <% end %>
    
+=======
+            <% when 11 %>
+                <td><%="MARJOV6" %></td>
+                <% when 12 %>
+                <td><%="MARJOV8" %></td>
+        <% end %>
+        
+>>>>>>> 39da3e644d983ded186e8a91761667c77d8a5be9
         <%if credit.agente_empresa %>
           <td><%= credit.padre.nombre_completo%></td>
         <%else%>

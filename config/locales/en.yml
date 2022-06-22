@@ -28,7 +28,8 @@ en:
   activerecord:
     attributes:
       credit:
-        country: "Pais"
+    
+        #country: "Pais"
         economical_activity_id: "Actividad Economica"
         product_id: "Producto"
         dirreccion_empresa: "Dirección de empresa"
@@ -270,7 +271,7 @@ en:
             country:
               blank: "es requerido"
             customer_id:
-              blank: "no se ha podido crear o vicular por verifique que el RFC y el CURP esten correctos si desea cambiar estos datos de algun cliente existente hagalo desde el formulario de editar cliente"
+              blank: "no se ha podido crear o vincular, por favor verifique que el RFC y el CURP esten correctos si desea cambiar estos datos de algun cliente existente hagalo desde el formulario de editar cliente"
             antiguedad_laboral_anos:
               blank: "es requerido"
             antiguedad_laboral_meses:
